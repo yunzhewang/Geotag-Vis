@@ -1,0 +1,35 @@
+<!-- This page is used for testing simple functions -->
+
+<svg id="test_svg" width="120" height="120" transform="translate(30 30)"></svg>
+
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="../js/my_js/draw_convex.js"></script>
+
+<script type="text/javascript">
+	var lineData = [ { "x": 1,   "y": 5},  { "x": 20,  "y": 20},
+	                 { "x": 40,  "y": 10}, { "x": 60,  "y": 40},
+	                 { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
+
+    // draw points
+    var g_points = d3.select("#test_svg").append("g").attr('id', 'g_points')
+    				 .attr('width', 100).attr('height', 100)
+    				 .attr('transform', 'translate(10,10)');
+
+    g_points.selectAll('.circle').data(lineData).enter()
+    		.append('circle')
+    		.attr('cx', function(d){return d.x;})
+    		.attr('cy', function(d){return d.y;})
+    		.attr('r', 2)
+    		.attr('stroke', 'black');
+
+    // draw convex of points
+    var g_convex = d3.select("#test_svg").append("g").attr('id', 'g_convex')
+    				 .attr('width', 120).attr('height', 120)
+    				 .attr('transform', 'translate(10,10)');;
+
+    var convex_hull = new draw_convex();
+    convex_hull.init(lineData, 'test_convex');
+    convex_hull.draw(g_convex);
+
+</script>

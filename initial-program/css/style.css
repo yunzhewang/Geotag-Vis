@@ -1,0 +1,48 @@
+body {
+    margin:0;
+    padding:0;
+    font-family:  'Montserrat';
+    line-height: 1.5em;
+    font-size: 12px;
+}
+
+
+.z-depth-2 {
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+}
+
+
+#ChoosePage{
+    margin:0px auto;
+    width:1500px;
+    height:620px;
+    margin-top:20px;
+    margin-left:45px;
+    float:left;
+    border-radius:6px;
+}
+
+
+.index_btn{
+    width:300px;
+    height:80px;
+    margin-top:260px;
+    border-radius:6px;
+    font-size:40px;
+    background-color: #bfbfbf;
+}
+
+
+#call_test{
+    margin-left:150px;
+    float:left;
+}
+
+
+#call_map{
+    margin-right:150px;
+    float:right;
+}
+
+
+

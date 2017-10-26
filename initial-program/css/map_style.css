@@ -1,0 +1,126 @@
+
+#map{
+	margin:0 auto;
+	width: 1500px;
+	height: 580px;
+	margin-top: 50px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+
+.controller{
+	padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+
+.controller h4{
+	margin: 0 0 5px;
+    color: #777;
+}
+
+.color-legend {
+    line-height: 30px;
+    color: #555;
+    font-size: 15px;
+
+    padding: 6px 6px;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.color-legend i {
+    width: 30px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+.drop-down-menu{
+    width: 150px;
+    height: 25px;
+
+    line-height: 30px;
+    color: #555;    
+    padding: 5px 5px;
+    
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.drop-down-menu select{
+    color: #777;
+    font: 15px Arial, Helvetica, sans-serif;
+}
+
+
+
+.pie-controller{
+    width: 450px;
+    height: 250px;
+
+    line-height: 30px;
+    color: #555;    
+    padding: 5px 5px;
+    
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    position: absolute;
+    top: 125px;
+    right: 5px;
+}
+
+.cloud-controller{
+    width: 400px;
+    height: 250px;
+
+    line-height: 30px;
+    color: #555;    
+    padding: 5px 5px;
+    
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    position: absolute;
+    top: 5px;
+    right: 1010px;
+}
+
+.hist-controller{
+    width: 400px;
+    height: 250px;
+
+    line-height: 30px;
+    color: #555;    
+    padding: 5px 5px;
+    
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+
+    position: absolute;
+    top: 280px;
+    right: 1010px;
+}
+
+#cluster_info{
+    color: #777;
+}
+
+

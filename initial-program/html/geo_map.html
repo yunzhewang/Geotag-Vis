@@ -1,0 +1,77 @@
+<!-- This page is the main interface -->
+<head>
+<!--   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.css"/>  // old version -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css"/>  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   <!-- for button icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/map_style.css" />
+  <link rel="stylesheet" href="../css/MarkerCluster.css"/>
+  <link rel="stylesheet" href="../css/leaflet-easy-button.css"/>
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <!-- online lib -->
+  <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.2/leaflet.js"></script>   // old version-->  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script>   
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <!-- local  lib -->
+  <script src="../jquery/jquery.js"></script>
+  <script src="../js/lib/leaflet.points-layer.js"></script>
+  <script src="../js/lib/leaflet.markercluster.js"></script>
+  <script src="../js/lib/leaflet-easy-button.js"></script>
+
+  <script src="../js/lib/heatmap.js"></script>
+  <script src="../js/lib/leaflet-heatmap.js"></script>
+  <script src="../js/lib/concave-hull.js"></script>
+  <script src="../js/lib/FileSaver.js"></script>
+  <script src="../js/lib/d3.layout.cloud.js"></script>
+
+  <!-- my script -->
+  <script src="../js/my_js/util.js"></script>
+  <script src="../js/my_js/map_d3.js"></script>
+  <script src="../js/my_js/leaflet_button.js"></script>
+  <script src="../js/my_js/draw_pie.js"></script>
+  <script src="../js/my_js/draw_cloud.js"></script>
+  <script src="../js/my_js/draw_hist.js"></script>
+  <script src="../js/my_js/map_leaflet.js"></script>
+
+  
+
+
+  <!-- instantiation -->
+  <script type="text/javascript">
+
+    var leaf_obj = new map_leaflet();
+    leaf_obj.init();
+    // leaf_obj.add_button();
+
+    
+    var circle_file = "../data/geojson/day_in_geojson/2012-12-01.geojson";
+    // map.marker_cluster(circle_file);
+    // leaf_obj.heatmap(circle_file);
+
+    // leaf_obj.draw_polygon(circle_file);    // also handling events inside
+
+    var directory = '../data/geojson/users_trace/';
+    var file_list = ['7327243@N05_1951', '7702423@N04_2151', '10845359@N02_2812', '12420978@N07_4451'];
+    for (var i=2; i<3;i++){
+      var full_path = directory+file_list[i]+'.geojson';
+      leaf_obj.draw_circle(full_path, i);
+      leaf_obj.draw_line(full_path, i);
+    }
+
+    // leaf_obj.map_event();        // click map event handling
+
+    /////////////////////      d3-related       /////////////////////
+
+
+
+  </script>
+
+  
+</body>
